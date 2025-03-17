@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-black/40 backdrop-blur-lg text-white py-12" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
