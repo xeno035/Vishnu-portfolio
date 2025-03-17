@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase } from "lucide-react";
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa"; // Importing from react-icons
 
 export default function About() {
   return (
     <motion.section
-    id="about"
+      id="about"
       className="py-20 bg-black/40 backdrop-blur-lg"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -46,7 +46,7 @@ export default function About() {
             className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-cyan-500/40 hover:text-cyan-400 transition duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <GraduationCap className="w-8 h-8 text-cyan-400" />
+              <FaGraduationCap className="w-8 h-8 text-cyan-400" /> {/* Updated icon */}
               <h3 className="text-2xl font-semibold text-white">Education</h3>
             </div>
             <motion.div
@@ -73,7 +73,7 @@ export default function About() {
             className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-cyan-500/40 hover:text-cyan-400 transition duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <Briefcase className="w-8 h-8 text-cyan-400" />
+              <FaBriefcase className="w-8 h-8 text-cyan-400" /> {/* Updated icon */}
               <h3 className="text-2xl font-semibold text-white">Experience</h3>
             </div>
             <motion.div
