@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaMailBulk, FaPhone } from 'react-icons/fa'; // Importing from react-icons
 import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
@@ -51,13 +51,13 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4 hover:text-cyan-400">Contact</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <FaPhone className="w-5 h-5 text-cyan-400" />
                 <a href="tel:6380580827" className="text-gray-400 hover:text-cyan-400">
                   +91 6380580827
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <FaMailBulk className="w-5 h-5 text-cyan-400" />
                 <a
                   href="mailto:Vishnukarunakaran3535@gmail.com"
                   className="text-gray-400 hover:text-cyan-400"
@@ -73,7 +73,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.1 }}
                   className="p-2 bg-gray-800 rounded-full hover:shadow-cyan-500/40 hover:bg-gray-700"
                 >
-                  <Linkedin className="w-5 h-5 text-cyan-400" />
+                  <FaLinkedin className="w-5 h-5 text-cyan-400" />
                 </motion.a>
                 <motion.a
                   href="https://github.com/xeno035"
@@ -82,7 +82,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.1 }}
                   className="p-2 bg-gray-800 rounded-full hover:shadow-cyan-500/40 hover:bg-gray-700"
                 >
-                  <Github className="w-5 h-5 text-cyan-400" />
+                  <FaGithub className="w-5 h-5 text-cyan-400" />
                 </motion.a>
               </div>
             </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+// Replacing lucide-react with react-icons
+import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai"; // Import icons from react-icons
 import tiger from "./tiger.jpg";
 import topoimg from "./topo.jpg";
 import secureimg from "./secure.jpg";
-import medpresimg from "./medpres.jpg"
+import medpresimg from "./medpres.jpg";
 
 const projects = [
   {
@@ -82,7 +83,7 @@ const Projects = () => {
                       whileHover={{ scale: 1.1 }}
                       className="p-2 bg-white rounded-full hover:shadow-cyan-500/40"
                     >
-                      <Github className="w-6 h-6 text-black" />
+                      <AiOutlineGithub className="w-6 h-6 text-black" /> {/* Replacing Github icon */}
                     </motion.a>
                     <motion.a
                       href="https://github.com/xeno035"
@@ -91,7 +92,7 @@ const Projects = () => {
                       whileHover={{ scale: 1.1 }}
                       className="p-2 bg-white rounded-full hover:shadow-cyan-500/40"
                     >
-                      <ExternalLink className="w-6 h-6 text-black" />
+                      <AiOutlineLink className="w-6 h-6 text-black" /> {/* Replacing ExternalLink icon */}
                     </motion.a>
                   </div>
                 </div>
