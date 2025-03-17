@@ -30,13 +30,13 @@ export default function GetInTouch() {
   return (
     <motion.section
       id="get-in-touch"
-      className="my-16 px-6 py-12 bg-gray-900 rounded-lg shadow-lg max-w-2xl mx-auto text-center"
+      className="my-16 px-6 py-12 bg-black/40 backdrop-blur-lg rounded-lg shadow-lg max-w-2xl mx-auto text-center border border-cyan-500/40"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.h3
-        className="text-3xl font-semibold text-white mb-4"
+        className="text-3xl font-semibold text-cyan-400 mb-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
@@ -45,7 +45,7 @@ export default function GetInTouch() {
       </motion.h3>
 
       <motion.p
-        className="text-gray-400 mb-8"
+        className="text-gray-300 mb-8"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -63,7 +63,7 @@ export default function GetInTouch() {
         <motion.input
           type="text"
           placeholder="Your Name"
-          className="w-full p-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 hover:shadow-cyan-500/40"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
@@ -72,7 +72,7 @@ export default function GetInTouch() {
         <motion.input
           type="email"
           placeholder="Your Email"
-          className="w-full p-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400 hover:shadow-cyan-500/40"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
@@ -80,7 +80,7 @@ export default function GetInTouch() {
         />
         <motion.textarea
           placeholder="Your Message"
-          className="w-full p-3 bg-gray-800 text-white rounded-md h-28 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 bg-gray-800 text-white rounded-md h-28 focus:outline-none focus:ring-2 focus:ring-cyan-400 hover:shadow-cyan-500/40"
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           required
@@ -89,7 +89,7 @@ export default function GetInTouch() {
 
         <motion.button
           type="submit"
-          className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition font-medium"
+          className="w-full py-3 bg-cyan-500 text-black font-bold rounded-md hover:bg-cyan-400 hover:shadow-cyan-500/40 transition"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

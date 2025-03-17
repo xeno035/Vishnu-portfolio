@@ -4,17 +4,9 @@ import { ExternalLink, Github } from "lucide-react";
 import tiger from "./tiger.jpg";
 import topoimg from "./topo.jpg";
 import secureimg from "./secure.jpg";
+import medpresimg from "./medpres.jpg"
 
-// Define Project Type
-interface Project {
-  title: string;
-  description: string;
-  image: string; // Can be a URL or an imported image
-  tech: string[];
-}
-
-// Project Data with Type Safety
-const projects: Project[] = [
+const projects = [
   {
     title: "Tiger Identification System",
     description: "AI-powered system using CNN and blockchain for secure tiger recognition and tracking.",
@@ -34,10 +26,10 @@ const projects: Project[] = [
     tech: ["Python", "AI", "Image Processing"],
   },
   {
-    title: "Personal Portfolio Website",
-    description: "Interactive portfolio built using React.js to showcase my skills and projects.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-    tech: ["React.js", "Tailwind CSS", "Framer Motion"],
+    title: "MedPres: A Digital Prescription Verification System",
+    description: "A secure system for managing and verifying medical prescriptions to prevent fraud and ensure safe medication dispensing.",
+    image: medpresimg,    // Replace with an actual image URL if you have one
+    tech: ["React.js", "Node.js", "Express.js", "SQLite", "Future MongoDB/PostgreSQL support"]
   },
   {
     title: "Web Scraper with Python",
@@ -53,9 +45,9 @@ const projects: Project[] = [
   },
 ];
 
-const Projects: React.FC = () => {
+const Projects = () => {
   return (
-    <section className="py-20 bg-gray-900">
+    <section id="projects" className="py-20 bg-black/40 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -72,45 +64,46 @@ const Projects: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-gray-800 rounded-xl overflow-hidden"
+              className="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 
+                         hover:shadow-[0_0_15px_rgba(0,255,255,0.6)] hover:scale-105"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-4">
                     <motion.a
-                      href="#"
+                      href="https://github.com/xeno035"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
-                      className="p-2 bg-white rounded-full"
+                      className="p-2 bg-white rounded-full hover:shadow-cyan-500/40"
                     >
                       <Github className="w-6 h-6 text-black" />
                     </motion.a>
                     <motion.a
-                      href="#"
+                      href="https://github.com/xeno035"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
-                      className="p-2 bg-white rounded-full"
+                      className="p-2 bg-white rounded-full hover:shadow-cyan-500/40"
                     >
                       <ExternalLink className="w-6 h-6 text-black" />
                     </motion.a>
                   </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-3 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm"
+                      className="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-xs hover:shadow-cyan-500/40 hover:text-cyan-400"
                     >
                       {tech}
                     </span>
