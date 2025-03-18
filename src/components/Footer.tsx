@@ -1,15 +1,12 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaMailBulk, FaPhone } from 'react-icons/fa'; // Importing from react-icons
-import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaMailBulk, FaPhone } from "react-icons/fa"; // Importing from react-icons
 
 export default function Footer() {
-  const navigate = useNavigate(); // ✅ Use inside Router
-
   return (
     <footer className="bg-black/40 backdrop-blur-lg text-white py-12" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -19,8 +16,8 @@ export default function Footer() {
               Full Stack Developer specializing in modern web technologies and AI integration.
             </p>
           </motion.div>
-          
-          {/* Quick Links with Navigation */}
+
+          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +26,7 @@ export default function Footer() {
           >
             <h3 className="text-xl font-semibold mb-4 hover:text-cyan-400">Quick Links</h3>
             <p className="text-gray-400 hover:text-cyan-400 cursor-pointer">
-             <a href="#hero"> About</a>
+              <a href="#hero">About</a>
             </p>
             <p className="text-gray-400 hover:text-cyan-400 cursor-pointer">
               <a href="#skill">Skills</a>
@@ -37,7 +34,7 @@ export default function Footer() {
             <p className="text-gray-400 hover:text-cyan-400 cursor-pointer">
               <a href="#projects">Projects</a>
             </p>
-            <p className="text-gray-400 hover:text-cyan-400 cursor-pointer" >
+            <p className="text-gray-400 hover:text-cyan-400 cursor-pointer">
               <a href="#get-in-touch">Contact</a>
             </p>
           </motion.div>

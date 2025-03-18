@@ -5,13 +5,15 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": "/src",
+      "@": "/src", // Ensure TypeScript recognizes this alias
     },
+  },
+  server: {
+    port: 5173,
   },
   build: {
     rollupOptions: {
-      external: ['react-router-dom'],
+      external: [], // Remove 'react-router-dom' from external
     },
   },
-  
 });
