@@ -19,7 +19,7 @@ export default function Hero() {
   // Function to download the resume
   const handleResumeDownload = () => {
     window.open(
-      "https://drive.google.com/file/d/1gT-Q-Sw3PFtB-V4Si8MJL-pZuEUHc5jS/view?usp=drive_link",
+      "https://drive.google.com/file/d/1gT-Q-Sw3PFtB-V4Si8MJL-pZuEUHc5jS/view?usp=sharing",
       "_blank"
     );
   };
